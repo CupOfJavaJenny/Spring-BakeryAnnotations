@@ -1,11 +1,14 @@
 package com.zipcodewilmington.bakery.models;
 
 
+import javax.persistence.*;
 import java.util.Objects;
-
+@Entity //Lets JPA know to create a table based on this class
 public class Baker {
+    @Id //Makes this attribute the unique identifier in the database
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+//    @Column(name = "name")
     private String name;
 
     private String employeeId;

@@ -10,3 +10,7 @@ public class BakeryApplication {
 		SpringApplication.run(BakeryApplication.class, args);
 	}
 }
+//@EnableAutoConfiguration
+//@ComponentScan
+//@Configuration
+//all done with SpringApplication

@@ -1,9 +1,14 @@
 package com.zipcodewilmington.bakery.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
-
+@Entity //Lets JPA know to create a table based on this class
 public class Muffin {
-
+    @Id //Makes this attribute the unique identifier in the database
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String flavor;
