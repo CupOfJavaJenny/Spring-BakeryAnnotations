@@ -13,14 +13,12 @@ public class BakerController {
     @Autowired //asks Spring to wire a dependency into a class from the Application Context
     private BakerService service;
 
-    public BakerController(BakerService service) {
-        this.service = service;
-    }
+    public BakerController(BakerService service) {this.service = service;}
     @GetMapping("/bakers")
     public ResponseEntity<Iterable<Baker>> index() {
         return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }
-    @GetMapping("/baker/{id}")//(endpoints) the path to make the getting of a baker's ID happen
+    @GetMapping("/bakers/{id}")//(endpoints) the path to make the getting of a baker's ID happen
     public ResponseEntity<Baker> show(@PathVariable Long id) {
         return new ResponseEntity<>(service.show(id), HttpStatus.OK);
     }
