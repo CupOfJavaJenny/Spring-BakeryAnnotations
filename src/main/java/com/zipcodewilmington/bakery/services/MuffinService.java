@@ -2,8 +2,12 @@ package com.zipcodewilmington.bakery.services;
 
 import com.zipcodewilmington.bakery.models.Muffin;
 import com.zipcodewilmington.bakery.repositories.MuffinRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service // Marks the class as a component, specifically a service
 public class MuffinService {
+   @Autowired //injects bean by type(dependencies)
     private MuffinRepository repository;
 
     public MuffinService(MuffinRepository repository) {

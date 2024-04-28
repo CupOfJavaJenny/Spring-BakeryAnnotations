@@ -2,8 +2,12 @@ package com.zipcodewilmington.bakery.services;
 
 import com.zipcodewilmington.bakery.models.Baker;
 import com.zipcodewilmington.bakery.repositories.BakerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service // Marks the class as a component, specifically a service
 public class BakerService {
+    @Autowired//injects bean by type(dependencies)
     private BakerRepository repository;
 
     public BakerService(BakerRepository repository) {
